@@ -1,4 +1,4 @@
-import 'package:elastic_slivers_app/Presentation/Routes/generated_routes.dart';
+import 'Presentation/Routes/generated_routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {

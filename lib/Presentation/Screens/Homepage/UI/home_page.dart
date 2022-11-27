@@ -1,7 +1,7 @@
-import 'package:elastic_slivers_app/Presentation/Components/spacer.dart';
-import 'package:elastic_slivers_app/Presentation/Declarations/constants.dart';
 import 'package:flutter/material.dart';
 
+import '../../../Components/spacer.dart';
+import '../../../Declarations/constants.dart';
 import '../Widgets/search_bar.dart';
 
 class HomePage extends StatelessWidget {
@@ -17,25 +17,36 @@ class HomePage extends StatelessWidget {
           const SliverAppBarBldr(),
           SliverToBoxAdapter(child: HeightSpacer(myHeight: kSpacing)),
           const SliverSearch(),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (BuildContext context, int index) {
-                return Padding(
-                  padding: kPadding/2,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: kBorderRadius,
-                      color: secondaryColor.withOpacity(0.3),
-                    ),
-                    height: 200,
-                    width: MediaQuery.of(context).size.width,
-                  ),
-                );
-              },
-              childCount: 20,
-            ),
-          ),
+          const SliverListBldr(),
         ],
+      ),
+    );
+  }
+}
+
+class SliverListBldr extends StatelessWidget {
+  const SliverListBldr({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SliverList(
+      delegate: SliverChildBuilderDelegate(
+        (BuildContext context, int index) {
+          return Padding(
+            padding: kPadding/2,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: kBorderRadius,
+                color: secondaryColor.withOpacity(0.3),
+              ),
+              height: 200,
+              width: MediaQuery.of(context).size.width,
+            ),
+          );
+        },
+        childCount: 20,
       ),
     );
   }
