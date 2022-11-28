@@ -2,23 +2,45 @@ import 'package:flutter/material.dart';
 
 import '../../../Declarations/constants.dart';
 
+
+class SliverSearch extends StatelessWidget {
+  const SliverSearch({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SliverAppBar(
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      elevation: 0,
+      pinned: true,
+      bottom: const PreferredSize(
+          preferredSize: Size.fromHeight(-10.0), child: SizedBox()),
+      flexibleSpace: const SearchBar(),
+    );
+  }
+}
+
+
 class SearchBar extends StatelessWidget {
   const SearchBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: kHPadding/1.5,
+      padding: kPadding,
       child: Container(
-        color: Theme.of(context).scaffoldBackgroundColor,
-        padding: EdgeInsets.only(bottom: kSpacing),
+        margin: EdgeInsets.zero,
+        color: Colors.transparent,
         child: Container(
+          margin: EdgeInsets.zero,
           width: MediaQuery.of(context).size.width,
           height: 60,
           decoration: BoxDecoration(
-              border: Border.all(color: Colors.grey),
-              borderRadius: kBorderRadius / 2,
-              color: Colors.grey.withOpacity(0.15)),
+            border: Border.all(color: Colors.grey),
+            borderRadius: kBorderRadius / 2,
+            color: Theme.of(context).scaffoldBackgroundColor,
+          ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
             child: TextFormField(
@@ -47,3 +69,4 @@ class SearchBar extends StatelessWidget {
     );
   }
 }
+
