@@ -45,9 +45,9 @@ Visit my channel 👉 : https://www.youtube.com/c/vijaycreationsflutter
 
 ## Sample Results
 
-<div align="center">
-    <img src='https://user-images.githubusercontent.com/58719230/204150798-5df0b650-5847-4ce4-b877-55c146b7530d.png'>
-</div>  
+
+  [<image src="https://user-images.githubusercontent.com/58719230/204150798-5df0b650-5847-4ce4-b877-55c146b7530d.png">](https://www.youtube.com/channel/UCBC_Z7jla1GSITcqLKAtPxQ)
+
   
 
   
